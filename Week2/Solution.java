@@ -1,8 +1,3 @@
-/*
-    Mỗi quân nhân 1 cấp bậc x, quân nhân phải báo cáo cho người có cấp bậc x + 1.
-    Viết hàm nhập 1 mảng, trả về số lượng quân nhân sẽ báo cáo trong mảng đó.
-*/
-
 import java.util.ArrayList;
 import java.util.List;
 
