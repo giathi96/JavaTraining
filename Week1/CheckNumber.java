@@ -1,3 +1,7 @@
+/* 
+    Số đẹp là số không có các số tạo nên nó trùng nhau.
+*/
+
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;

@@ -1,3 +1,8 @@
+/* 
+    Mảng rank lưu bậc của quân nhân. Bậc x cần báo cáo bậc x + 1.
+    Tạo hàm đến số quân nhân cần phải báo cáo.
+*/
+
 import java.util.ArrayList;
 import java.util.List;
 
