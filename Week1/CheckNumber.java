@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class CheckNumber{
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap so can kiem tra: ");
         int number = sc.nextInt();
