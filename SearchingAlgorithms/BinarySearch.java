@@ -1,7 +1,7 @@
 public class BinarySearch {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6};
-        int number = 7;
+        int number = 5;
         int result = binarySearchRecursion(arr, 0, arr.length - 1, number);
         if(result != -1) {
             System.out.printf("Index of number: %d", result);
