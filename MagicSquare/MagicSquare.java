@@ -5,17 +5,16 @@ public class MagicSquare {
             {4,3,4,5,3},
             {2,7,3,8,4},
             {1,7,6,5,2},
-            {8,4,9,5,5}
+            {0,4,9,5,5}
         };
         int[] result =  loopCheck(square);
-        System.out.printf("Size: %d\nDiagonal: %d", result[1], result[0]);
+        System.out.printf("Size: %d\nDiagonal: %d \n", result[1], result[0]);
     }
 
     // Check hình vuông bắt đầu từ vị trí [row][col] với size = size có phải là magic square không.
-    // Em mới chỉ kiểm tra 2 đường chéo, chưa kiểm tra hàng ngang hàng dọc
     public static int checkMagicSquare(int[][] square, int size, int row, int collum) {
         int sumD1 = 0;
-        int sumD2=0;
+        int sumD2 = 0;
         for (int i = 0; i < size; i++){
             sumD1 += square[row + i][collum + i];
             sumD2 += square[row + i][collum + size - i - 1];
@@ -23,6 +22,19 @@ public class MagicSquare {
         if(sumD1!=sumD2){
             return -1;
         }
+
+        for (int i = 0; i < size; i++) {
+ 
+            int rowSum = 0, colSum = 0;
+            for (int j = 0; j < size; j++)
+            {
+                rowSum += square[row + i][collum + j];
+                colSum += square[row + j][collum + i];
+            }
+            if (rowSum != colSum || colSum != sumD1)
+                return -1;
+        }
+
         return sumD1;
     }
 
