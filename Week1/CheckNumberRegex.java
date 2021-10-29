@@ -16,6 +16,7 @@ public class CheckNumberRegex {
         } else {
             System.out.println(number + " khong phai la mot so dep!");
         }
+        sc.close();
     }
 
     public static boolean checkNumber(int number) {
