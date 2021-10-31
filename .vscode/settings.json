@@ -2,8 +2,9 @@
     "java.project.sourcePaths": [
         "Week2",
         "Week1",
+        "SortingAlgorithms",
         "SearchingAlgorithms",
         "MagicSquare",
-        "SortingAlgorithms"
+        "CodeLearn"
     ]
 }
