@@ -1,23 +1,25 @@
 // Tìm sô tăng dần nhỏ nhất với giá trị bằng hoặc lớn hơn n.
-
-
 import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Collections;
 
 public class FindNumber {
     public static void main(String[] args) {
-        System.out.print(findNumber(9199999));
+        System.out.print(findNumber(864783));
     }
 
     public static Boolean checkNumber(int number) {
-        List<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list2 = new ArrayList<Integer>();
+        ArrayList<Integer> list3 = new ArrayList<Integer>();
         while(number > 0) {
             list.add(number % 10);
+            list2.add(number % 10);
+            list3.add(number % 10);
             number /= 10;
         }
-        List<Integer> list2 = list.stream().sorted((item1, item2) -> item1 - item2).collect(Collectors.toList());
-        List<Integer> list3 = list.stream().sorted((item1, item2) -> item2 - item1).collect(Collectors.toList());
+
+        Collections.sort(list2);
+        Collections.sort(list3, Collections.reverseOrder());
 
         if(list.equals(list2) || list.equals(list3)){
             return true;
